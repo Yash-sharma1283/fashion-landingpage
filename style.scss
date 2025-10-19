@@ -10,8 +10,7 @@ html,body{
 }
 
 section{
-    max-width:1900px;
-    
+    max-width:1900px; 
 }
 body{
     background:black;
@@ -22,11 +21,12 @@ body{
     gap:$gap;
 }
 main{
-width: 100%;
- @include flex-layout(0rem);
+  padding: 1rem;
+  width: 100%;
+ @include flex-layout(1rem);
  align-items: center;
 
-section{
+    .view1{
     width: 100%;
     padding: 1rem;
     @include flex-layout(1rem);
@@ -38,6 +38,7 @@ section{
             width: 100%;
             border-radius: 0.7rem;
             height: 100%;
+            object-fit: cover;
         }
     }
         .bottom{
@@ -46,7 +47,7 @@ section{
             color: rgb(191, 191, 191);
             font-weight: 100;
             background-color: #1E1E1E;
-            
+            padding: 2rem;
             @include flex-layout(4rem);
             
             p{
@@ -78,10 +79,153 @@ section{
             }
         }
     }
+    .view2{
+      color: azure;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 2rem;
+      .element{
+        @include flex-layout(0.7rem);
+      }
+      .top,.bottom{
+        width: 50%;
+        align-items: center;
+        @include flex-layout(1rem);
+        h2{
+          font-size: 3.5rem;
+          font-weight: 400;
+        }
+      }
+      
+
+    }
+    .view3{
+     
+      width: 100%;
+       @include flex-layout(1rem);
+      .top{
+        width: 100%;
+        img{
+          width: 100%;
+          border-radius: 1rem;
+          object-fit: cover;
+          height: 100%;
+          
+      }
+      
+      }
+      .bottom{
+        width: 100%;
+        @include flex-layout(4rem);
+        padding: 2rem;
+        width: 100%;
+        color: rgba(244, 242, 237, .6);
+         background-color: #1E1E1E;
+          border-radius: 1rem;
+         .paragraph p {
+          display: inline;
+         }
+        .text {
+          font-weight: 400;
+          @include flex-layout(1.5rem);
+         
+          
+        }
+        h2{
+          color: white;
+          font-weight: 400;
+           font-size: 3rem;
+        }
+        .text{
+          p{
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      }
+      
+    }
+   .view4{
+     
+      width: 100%;
+       @include flex-layout(1rem);
+      .top{
+        width: 100%;
+        img{
+          width: 100%;
+          border-radius: 1rem;
+          object-fit: cover;
+          height: 100%;
+          
+      }
+      
+      }
+      .bottom{
+        width: 100%;
+        @include flex-layout(4rem);
+        padding: 2rem;
+        width: 100%;
+        color: rgba(244, 242, 237, .6);
+         background-color: #1E1E1E;
+          border-radius: 1rem;
+         .paragraph p {
+          display: inline;
+         }
+        .text {
+          font-weight: 400;
+          @include flex-layout(1.5rem);
+         
+          
+        }
+        h2{
+          color: white;
+          font-weight: 400;
+           font-size: 3rem;
+        }
+        .text{
+          p{
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      }
+      
+    }
+  .view5 {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap; 
+    gap:1rem;
+ .card{
+  
+  aspect-ratio: 1/1;
+   flex: 1 1 100%; 
+  img {
+      width: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+  }
+    
+  }
 }
+  }
+ @media (min-width: 755px) and (max-width: 989px)  {     
+      main{
+      section.view5{
+      .card {
+      flex: 1 1 calc(50% - 1rem);
+      }
+
+  }
+}
+  }
+ 
 @media (min-width: 990px) {
   main {
-    section {
+    section.view1 {
       flex-direction: row;
 
       .top,
@@ -115,6 +259,47 @@ section{
       }
       
     }
-    
+    section.view2{
+     
+    .top,.bottom{
+       flex-direction: row;
+       justify-content: space-around;
+             
+    }
+    }
+    section.view3{
+      flex-direction: row-reverse;
+      gap: 1rem;
+      .bottom{
+        justify-content: space-between;
+      }
+      .paragraph{
+        display: flex;
+        gap: 1rem;
+      }
+      .top,.bottom{
+        width: 50%;
+      }
+    }
+    section.view4{
+     flex-direction: row;
+      gap: 1rem;
+      .bottom{
+        justify-content: space-between;
+      }
+      .paragraph{
+        display: flex;
+        gap: 1rem;
+      }
+      .top,.bottom{
+        width: 50%;
+      }
+    }
+    section.view5{
+      .card{
+      flex: 1 1 calc(33.33% - 1rem);
+      }
+    }
+
   }
 }
