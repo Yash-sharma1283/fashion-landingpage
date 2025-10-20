@@ -199,11 +199,7 @@ main{
     flex-wrap: wrap; 
     gap:1rem;
  .card{
-  
-  aspect-ratio: 1/1;
-   flex: 1 1 100%; 
   img {
-      width: 100%;
       width: 100%;
       object-fit: cover;
       border-radius: 1rem;
@@ -218,6 +214,10 @@ main{
       .card {
       flex: 1 1 calc(50% - 1rem);
       }
+       .card:last-child {
+      
+      max-width: calc(50% - 1rem);
+    }
 
   }
 }

@@ -203,12 +203,7 @@ main .view5 {
   flex-wrap: wrap;
   gap: 1rem;
 }
-main .view5 .card {
-  aspect-ratio: 1/1;
-  flex: 1 1 100%;
-}
 main .view5 .card img {
-  width: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -218,6 +213,9 @@ main .view5 .card img {
 @media (min-width: 755px) and (max-width: 989px) {
   main section.view5 .card {
     flex: 1 1 calc(50% - 1rem);
+  }
+  main section.view5 .card:last-child {
+    max-width: calc(50% - 1rem);
   }
 }
 @media (min-width: 990px) {
