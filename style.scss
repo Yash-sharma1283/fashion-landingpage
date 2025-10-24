@@ -21,10 +21,11 @@ body{
     gap:$gap;
 }
 main{
+  
   padding: 1rem;
   width: 100%;
- @include flex-layout(1rem);
- align-items: center;
+  @include flex-layout(1rem);
+  align-items: center;
 
     .view1{
     width: 100%;
@@ -192,12 +193,17 @@ main{
       }
       
     }
-  .view5 {
+   .view5 {
     width: 100%;
-    padding: 1rem;
     display: flex;
     flex-wrap: wrap; 
     gap:1rem;
+    .text{
+      color: white;
+      width: 100%;
+      font-size: 32px;
+      padding:0px 24px ;
+    }
  .card{
   img {
       width: 100%;
@@ -206,7 +212,80 @@ main{
   }
     
   }
-}
+    }
+    .view6{
+     
+      width: 100%;
+       @include flex-layout(1rem);
+      .top{
+        width: 100%;
+        img{
+          width: 100%;
+          border-radius: 1rem;
+          object-fit: cover;
+          height: 100%;
+          
+      }
+      
+      }
+      .bottom{
+        width: 100%;
+        @include flex-layout(2rem);
+        padding: 2rem;
+        width: 100%;
+        color: rgba(244, 242, 237, .6);
+         background-color: #1E1E1E;
+          border-radius: 1rem;
+        
+        .text1{
+          @include flex-layout(6rem);
+        }
+       .text{
+        @include flex-layout(0.6rem);
+        h2{
+          @include flex-layout(1rem);
+          color: white;
+          font-weight: 400;
+          font-size: 2rem;
+          line-height:2.6rem ;
+          font-family: sans-serif
+        }
+        
+          p{
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        }
+       p{
+        color: white;
+       }
+     
+      }
+      
+    }
+    .view7{
+      @include flex-layout(2rem);
+      background-color:#CEBD63;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      p{
+        font-size: 14px;
+      }
+      button{
+        background-color: #1E1E1E;
+        color: white;
+        padding: 1rem 1.1rem;
+        border-radius: 0.8rem;
+        width: 100%;
+        font-size: 1rem;
+      }
+      h1{
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+    }
   }
  @media (min-width: 755px) and (max-width: 989px)  {     
       main{
@@ -220,6 +299,22 @@ main{
     }
 
   }
+    section.view6{
+      
+      .bottom{
+        .text{
+           
+            h2{
+              font-size: 44px;
+              line-height: 3.2rem;
+              font-weight: 400;
+              
+              
+            }
+
+        }
+      }
+    }
 }
   }
  
@@ -300,6 +395,31 @@ main{
       flex: 1 1 calc(33.33% - 1rem);
       }
     }
-
+    section.view6{
+      flex-direction: row;
+    }
+    section.view7{
+      flex-direction: row;
+      
+      padding: 3rem;
+      .text{
+        h1{
+          font-size: 3.5rem;
+        }
+      }
+      .button{
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+       
+        button{
+        font-size: 0.88;
+        padding: 16px 20px;
+        
+        }
+      }
+    }
   }
 }

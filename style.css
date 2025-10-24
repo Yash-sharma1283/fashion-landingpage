@@ -198,16 +198,100 @@ main .view4 .bottom .text p {
 }
 main .view5 {
   width: 100%;
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+main .view5 .text {
+  color: white;
+  width: 100%;
+  font-size: 32px;
+  padding: 0px 24px;
 }
 main .view5 .card img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;
+}
+main .view6 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view6 .top {
+  width: 100%;
+}
+main .view6 .top img {
+  width: 100%;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+main .view6 .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  color: rgba(244, 242, 237, 0.6);
+  background-color: #1E1E1E;
+  border-radius: 1rem;
+}
+main .view6 .bottom .text1 {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+main .view6 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+main .view6 .bottom .text h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-family: sans-serif;
+}
+main .view6 .bottom .text p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main .view6 .bottom p {
+  color: white;
+}
+main .view7 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #CEBD63;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+main .view7 p {
+  font-size: 14px;
+}
+main .view7 button {
+  background-color: #1E1E1E;
+  color: white;
+  padding: 1rem 1.1rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  font-size: 1rem;
+}
+main .view7 h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
 }
 
 @media (min-width: 755px) and (max-width: 989px) {
@@ -216,6 +300,11 @@ main .view5 .card img {
   }
   main section.view5 .card:last-child {
     max-width: calc(50% - 1rem);
+  }
+  main section.view6 .bottom .text h2 {
+    font-size: 44px;
+    line-height: 3.2rem;
+    font-weight: 400;
   }
 }
 @media (min-width: 990px) {
@@ -277,5 +366,25 @@ main .view5 .card img {
   }
   main section.view5 .card {
     flex: 1 1 calc(33.33% - 1rem);
+  }
+  main section.view6 {
+    flex-direction: row;
+  }
+  main section.view7 {
+    flex-direction: row;
+    padding: 3rem;
+  }
+  main section.view7 .text h1 {
+    font-size: 3.5rem;
+  }
+  main section.view7 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+  }
+  main section.view7 .button button {
+    font-size: 0.88;
+    padding: 16px 20px;
   }
 }/*# sourceMappingURL=style.css.map */
