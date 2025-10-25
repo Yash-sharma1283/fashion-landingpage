@@ -277,8 +277,18 @@ main .view7 {
   padding: 2rem;
   border-radius: 1.5rem;
 }
-main .view7 p {
+main .view7 .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .view7 .text p {
   font-size: 14px;
+}
+main .view7 .text h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
 }
 main .view7 button {
   background-color: #1E1E1E;
@@ -287,11 +297,6 @@ main .view7 button {
   border-radius: 0.8rem;
   width: 100%;
   font-size: 1rem;
-}
-main .view7 h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 1;
 }
 
 @media (min-width: 755px) and (max-width: 989px) {
@@ -372,6 +377,8 @@ main .view7 h1 {
   }
   main section.view7 {
     flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
     padding: 3rem;
   }
   main section.view7 .text h1 {
@@ -379,8 +386,6 @@ main .view7 h1 {
   }
   main section.view7 .button {
     display: flex;
-    justify-content: center;
-    align-items: center;
     white-space: nowrap;
   }
   main section.view7 .button button {
